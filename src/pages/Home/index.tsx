@@ -43,14 +43,14 @@ const isSubmitDisabled = !task
         <HomeContainer>
             <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
             <FormContainer>
-               <label htmlFor="task">Vou trabalhar em</label>
+               <label htmlFor="task">I will work on</label>
                 <TaskInput 
                     id="text"
                     {...register('task')}
                     placeholder='Give a name for your project' 
                     list="taskSuggestions"/>
 
-                <label htmlFor="minutesAmount">durante</label>
+                <label htmlFor="minutesAmount">over</label>
                 <MinutesAmountInput 
                     type="number" 
                     id="minutesAmount"
@@ -61,7 +61,7 @@ const isSubmitDisabled = !task
                     max={60}
                     />
 
-                <span>minutos</span>
+                <span>minutes</span>
                 </FormContainer>
 
                 <CountdownContainer>
