@@ -90,6 +90,6 @@ export function CyclesContextProvider({children}:CyclesContextProviderProps){
                 interruptCurrentCycle
             }}>
             {children}
-    </CyclesContext.Provider>
+        </CyclesContext.Provider>
     )
 }

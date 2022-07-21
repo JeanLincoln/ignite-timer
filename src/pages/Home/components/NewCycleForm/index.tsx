@@ -27,7 +27,6 @@ export function NewCycleForm() {
                     valueAsNumber:true
                 })}
                 placeholder='00' 
-                step={5}
                 min={1}
                 max={60}
                 disabled={!!activeCycle}
