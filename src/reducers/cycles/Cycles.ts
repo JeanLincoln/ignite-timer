@@ -1,3 +1,5 @@
+import { ActionTypes } from "./Actions"
+
 export type Cycle = {
   id: string
   task: string
@@ -10,12 +12,6 @@ export type Cycle = {
 type CyclesState = {
   cycles: Cycle[]
   activeCycleId: string | null
-}
-
-export enum ActionTypes {
-  ADD_NEW_CYCLE = 'ADD_NEW_CYCLE',
-  INTERRUPT_CURRENT_CYCLE = 'INTERRUPT_CURRENT_CYCLE',
-  MARK_CURRENT_CYCLE_AS_FINISHED = 'MARK_CURRENT_CYCLE_AS_FINISHED',
 }
 
 export function cyclesReducer(state: CyclesState, action: any) {
