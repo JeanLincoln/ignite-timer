@@ -17,12 +17,11 @@ type CyclesState = {
 
 export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
-
     case ActionTypes.ADD_NEW_CYCLE:
       return produce(state, (draft) => {
         draft.cycles.push(action.payload.newCycle)
         draft.activeCycleId = action.payload.newCycle.id
-    })
+      })
 
     case ActionTypes.INTERRUPT_CURRENT_CYCLE: {
       const currentCycleIndex = state.cycles.findIndex(
@@ -37,7 +36,7 @@ export function cyclesReducer(state: CyclesState, action: any) {
       })
     }
 
-    case ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED:{
+    case ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED: {
       const currentCycleIndex = state.cycles.findIndex(
         (cycle) => cycle.id === state.activeCycleId,
       )
@@ -48,7 +47,6 @@ export function cyclesReducer(state: CyclesState, action: any) {
         draft.activeCycleId = null
         draft.cycles[currentCycleIndex].finishedDate = new Date()
       })
-
     }
     default:
       return state
